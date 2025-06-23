@@ -12,9 +12,11 @@ namespace AStarPathing {
     internal class Program {
         private static void Main(string[] args) {
 
-            var runs = 100;
+            //var runs = 100;
+            var runs = 1;
 
-            var image = (Bitmap) Image.FromFile("cavern.gif");
+            //var image = (Bitmap)Image.FromFile("cavern.gif");
+            var image = (Bitmap) Image.FromFile("test.bmp");
 
             var width = image.Width;
             var height = image.Height;
@@ -32,8 +34,10 @@ namespace AStarPathing {
             var search = new AStarSearch(grid);
 
             for (var runIndex = 0; runIndex < runs; runIndex++) {
-                var start = new Vector2Int(10, 10);
-                var goal = new Vector2Int(width - 10, height - 10);
+                //var start = new Vector2Int(10, 10);
+                //var goal = new Vector2Int(width - 10, height - 10);
+                var start = new Vector2Int(120, 37);
+                var goal = new Vector2Int(378, 1387);
 
                 for (var x = 0; x < width; x++)
                 for (var y = 0; y < height; y++) {
