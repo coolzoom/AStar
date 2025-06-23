@@ -45,6 +45,7 @@ namespace AStarPathing {
                 var path = search.Find(start, goal);
                 timer.Stop();
 
+                //no path find
                 if (!path.Any() || !path.Last().Location.Equals(goal) || !path.First().Location.Equals(start))
                     throw new Exception("Failure");
 
